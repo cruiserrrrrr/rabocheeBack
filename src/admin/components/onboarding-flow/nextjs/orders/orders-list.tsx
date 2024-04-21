@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { 
+import {
   useAdminProduct,
   useCreateCart,
   useMedusa
@@ -55,11 +55,11 @@ const OrdersListNextjs = ({ isComplete, data }: StepContentProps) => {
       <div className="flex gap-2">
         {!isComplete && (
           <a
-            href={`http://localhost:8000/checkout?cart_id=${cartId}&onboarding=true`}
+            href={`http://178.250.157.233:8000/checkout?cart_id=${cartId}&onboarding=true`}
             target="_blank"
           >
             <Button variant="primary" size="base" isLoading={!cartId || cartIsLoading}>
-            Place an order in your storefront
+              Place an order in your storefront
             </Button>
           </a>
         )}
