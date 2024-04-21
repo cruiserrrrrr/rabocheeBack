@@ -5,7 +5,12 @@
       "usd"
     ]
   },
-  "users": [],
+  "users": [
+    {
+      "email": "cruiserrrrrr@gmail.com",
+      "password": "megaSosaloEtoVse"
+    }
+  ],
   "regions": [
     {
       "id": "test-region-eu",
