@@ -4,6 +4,7 @@ import { Button, Text } from "@medusajs/ui";
 
 const ProductDetailNextjs = ({ onNext, isComplete, data }: StepContentProps) => {
   const { product, isLoading: productIsLoading } = useAdminProduct(data?.product_id)
+  // test dev branch
   return (
     <div>
       <div className="flex flex-col gap-2">
