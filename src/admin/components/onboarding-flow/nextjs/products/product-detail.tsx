@@ -34,7 +34,7 @@ const ProductDetailNextjs = ({ onNext, isComplete, data }: StepContentProps) => 
       </div>
       <div className="flex gap-2 mt-6">
         <a
-          href={`http://178.250.157.233:8000/products/${product?.handle}?onboarding=true`}
+          href={`http://localhost:8000/products/${product?.handle}?onboarding=true`}
           target="_blank"
         >
           <Button variant="primary" size="base" isLoading={productIsLoading}>

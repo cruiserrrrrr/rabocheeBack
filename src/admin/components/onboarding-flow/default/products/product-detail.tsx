@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from "react"
-import { 
+import {
   useAdminPublishableApiKeys,
   useAdminCreatePublishableApiKey
 } from "medusa-react"
@@ -12,11 +12,11 @@ const ProductDetailDefault = ({ onNext, isComplete, data }: StepContentProps) =>
     limit: 1,
   });
   const createPublishableApiKey = useAdminCreatePublishableApiKey()
-  
+
   const api_key = useMemo(() => keys?.[0]?.id || "", [keys])
-  const backendUrl = process.env.MEDUSA_BACKEND_URL === "/" || process.env.MEDUSA_ADMIN_BACKEND_URL === "/" ? 
+  const backendUrl = process.env.MEDUSA_BACKEND_URL === "/" || process.env.MEDUSA_ADMIN_BACKEND_URL === "/" ?
     location.origin :
-    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "http://178.250.157.233:9000"
+    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "http://localhost:9000"
 
   useEffect(() => {
     if (!isLoading && !keys?.length) {
@@ -29,7 +29,7 @@ const ProductDetailDefault = ({ onNext, isComplete, data }: StepContentProps) =>
       })
     }
   }, [isLoading, keys])
-  
+
   return (
     <div>
       <div className="flex flex-col gap-2">
